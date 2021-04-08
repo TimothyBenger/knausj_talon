@@ -44,13 +44,69 @@ _word_map_defaults = {
 }
 
 # Default words that should be added to Talon's vocabulary.
-_simple_vocab_default = ["nmap", "admin", "Cisco", "Citrix", "VPN", "DNS", "Minecraft"]
+_simple_vocab_default = ["nmap", "admin", "Cisco", "Citrix", "VPN", "DNS", "Minecraft", "Ferran", "Angelos", "storageos"]
 
 # Defaults for different pronounciations of words that need to be added to
 # Talon's vocabulary.
 _mapping_vocab_default = {
     "N map": "nmap",
     "under documented": "under-documented",
+    "koob control": "kubectl",
+    "cube control": "kubectl",
+    "keep control": "kubectl",
+    "chang pod": "pod",
+    "chang pods": "pods",
+    "chang node": "node",
+    "chang nodes": "nodes",
+    "chang kubernetes": "kubernetes",
+    "chang git": "git",
+    "chang pull": "pull",
+    "chang com": "com",
+    "chang delete": "delete",
+    "trying to lead": "delete",
+    "replica set": "replicaset",
+    "change delete": "delete",
+    "name space": "namespace",
+    "at it": "edit",
+    "chang sudo": "sudo",
+    "diagnostic yew till": "diagnosticutil",
+    "stateful set": "statefulset",
+    "in flux": "influx",
+    "you control": "kubectl",
+    "check out": "checkout",
+    "make directory": "mkdir",
+    "demon set": "daemonset",
+    "demon sets": "daemonsets",
+    "chang log": "log",
+    "chang logs": "log",
+    "koob control create from file": "kubectl create -f",
+    "cube control create from file": "kubectl create -f",
+    "keep control create from file": "kubectl create -f",
+    "chang seff": "ceph",
+    "ray doss": "RADOS",
+    "raydos": "RADOS",
+    "open sauce": "open-source",
+    "all namespaces": "--all-namespaces",
+    "output wide": "-o wide",
+    "etsy dee": "etcd",
+    "at city": "etcd",
+    "at cd": "etcd",
+    "cube system": "kube-system",
+    "from file": " - f ",
+    "with namespace": " - n ",
+    "chang log": "log",
+    "chang logs": "logs",
+    "change directory": "cd",
+    "storage class": "storageclass",
+    "my sequel": "mysql",
+    "dee bench": "dbench",
+    "chang hay": "hey",
+    "elastic search": "elasticsearch",
+    "elastic such": "elasticsearch",
+    "storage oh ess": "storageos",
+    "store to us": "storageos",
+    "store ous": "storageos",
+    "store joes": "store joes"
 }
 
 

@@ -70,7 +70,7 @@ setting_mouse_hide_mouse_gui = mod.setting(
 setting_mouse_continuous_scroll_amount = mod.setting(
     "mouse_continuous_scroll_amount",
     type=int,
-    default=80,
+    default=2,
     desc="The default amount used when scrolling continuously",
 )
 setting_mouse_wheel_down_amount = mod.setting(
@@ -228,7 +228,7 @@ def show_cursor_helper(show):
                 if show:
                     winreg.SetValueEx(
                         Registrykey, value_name, 0, winreg.REG_EXPAND_SZ, value
-                    )
+                    )   
                 else:
                     winreg.SetValueEx(
                         Registrykey, value_name, 0, winreg.REG_EXPAND_SZ, hidden_cursor
@@ -246,17 +246,19 @@ def show_cursor_helper(show):
         ctrl.cursor_visible(show)
 
 
-def on_pop(active):
-    if gaze_job or scroll_job:
-        if setting_mouse_enable_pop_stops_scroll.get() >= 1:
-            stop_scroll()
-    elif (
-        not eye_zoom_mouse.zoom_mouse.enabled
-        and eye_mouse.mouse.attached_tracker is not None
-    ):
-        if setting_mouse_enable_pop_click.get() >= 1:
-            ctrl.mouse_click(button=0, hold=16000)
+# def on_pop(active):
+#     if gaze_job or scroll_job:
+#         if setting_mouse_enable_pop_stops_scroll.get() >= 1:
+#             stop_scroll()
+#     elif (
+#         not eye_zoom_mouse.zoom_mouse.enabled
+#         and eye_mouse.mouse.attached_tracker is not None
+#     ):
+#         if setting_mouse_enable_pop_click.get() >= 1:
+#             ctrl.mouse_click(button=0, hold=16000)
 
+def on_pop(active):
+    ctrl.mouse_click(button=0, hold=16000)
 
 noise.register("pop", on_pop)
 
